@@ -23,9 +23,14 @@ export default defineConfig(({ mode }: { mode: string }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  base: '/eric-vang-ai-portfolio/',  // Replace with your repository name
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
 }));
