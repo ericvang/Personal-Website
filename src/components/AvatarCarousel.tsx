@@ -36,14 +36,14 @@ const AvatarCarousel = () => {
   };
 
   return (
-    <div className="relative w-[80vw] h-[80vw] max-w-[32rem] max-h-[32rem] floating-avatar">
+    <div className="relative w-[min(80vw,32rem)] h-[min(80vw,32rem)] floating-avatar">
       <div 
         className="relative w-full h-full bg-transparent group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Border Circle */}
-        <div className="absolute inset-0 rounded-full border-[2%] border-green-600/30"></div>
+        <div className="absolute inset-0 rounded-full border-[6px] border-green-600/30"></div>
         
         {/* Images */}
         <AnimatePresence mode="wait">
@@ -58,7 +58,7 @@ const AvatarCarousel = () => {
             <img 
               src={images[currentImage].src}
               alt={images[currentImage].alt}
-              className="absolute inset-0 w-full h-full rounded-full object-cover mix-blend-multiply p-[2%]"
+              className="absolute inset-0 w-full h-full rounded-full object-cover mix-blend-multiply p-2"
             />
           </motion.div>
         </AnimatePresence>
@@ -68,17 +68,17 @@ const AvatarCarousel = () => {
           <>
             <button 
               onClick={previousImage}
-              className="absolute left-[5%] top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-[3%] shadow-lg hover:bg-white transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-lg hover:bg-white transition-colors"
             >
-              <svg className="w-[8%] h-[8%] min-w-[1.5rem] min-h-[1.5rem] text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button 
               onClick={nextImage}
-              className="absolute right-[5%] top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-[3%] shadow-lg hover:bg-white transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow-lg hover:bg-white transition-colors"
             >
-              <svg className="w-[8%] h-[8%] min-w-[1.5rem] min-h-[1.5rem] text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -86,12 +86,12 @@ const AvatarCarousel = () => {
         )}
 
         {/* Navigation Dots */}
-        <div className="absolute -bottom-[15%] left-1/2 -translate-x-1/2 flex space-x-[2%]">
+        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex space-x-2">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImage(index)}
-              className={`w-[3%] h-[3%] min-w-[0.75rem] min-h-[0.75rem] rounded-full transition-colors ${
+              className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentImage ? 'bg-green-600' : 'bg-green-600/30'
               }`}
             />
@@ -104,9 +104,9 @@ const AvatarCarousel = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="absolute -top-[15%] left-1/2 -translate-x-1/2 bg-white/90 px-[4%] py-[2%] rounded-full shadow-lg"
+            className="absolute -top-12 left-1/2 -translate-x-1/2 bg-white/90 px-4 py-2 rounded-full shadow-lg"
           >
-            <p className="text-[3%] min-text-[0.875rem] text-gray-600">Hover to pause rotation</p>
+            <p className="text-sm text-gray-600">Hover to pause rotation</p>
           </motion.div>
         )}
       </div>
