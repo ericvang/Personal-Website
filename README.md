@@ -1,6 +1,6 @@
 # Eric Vang's Portfolio
 
-A modern, single-page React portfolio with an AI-powered chat widget that helps visitors learn about my projects.
+A modern, single-page React portfolio with a work in progress AI-powered chat widget that helps visitors learn about my projects.
 
 ## Features
 
@@ -33,8 +33,8 @@ A modern, single-page React portfolio with an AI-powered chat widget that helps 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ericvang/portfolio.git
-   cd portfolio
+   git clone https://github.com/ericvang/Personal-Website.git
+   cd Personal-Website
    ```
 
 2. Install frontend dependencies:
@@ -48,13 +48,7 @@ A modern, single-page React portfolio with an AI-powered chat widget that helps 
    npm install
    ```
 
-4. Create a `.env` file in the server directory:
-   ```
-   PORT=3000
-   HF_API_KEY=your_huggingface_api_key_here
-   ```
-
-5. Initialize the database:
+4. Initialize the database:
    ```bash
    npm run build
    node dist/initDb.js
@@ -95,6 +89,3 @@ A modern, single-page React portfolio with an AI-powered chat widget that helps 
 
 The frontend build will be in the `dist` directory, and the backend build will be in `server/dist`.
 
-## License
-
-MIT
