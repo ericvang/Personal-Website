@@ -46,12 +46,12 @@ const Projects = () => {
                 ))}
               </div>
               {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                   className="text-blue-500 hover:text-blue-600 transition-colors duration-300"
-                >
+              >
                   View on GitHub →
                 </a>
               )}
