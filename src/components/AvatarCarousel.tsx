@@ -8,10 +8,9 @@ interface AvatarImage {
 }
 
 const images: AvatarImage[] = [
-  { id: 1, src: '/AvatarIcon.jpeg', alt: 'Professional Avatar' },
-  { id: 2, src: '/Eric.JPG', alt: 'Eric' },
-  { id: 3, src: '/projects.jpeg', alt: 'Projects' },
-  { id: 4, src: '/ai.jpeg', alt: 'AI Work' },
+  { id: 1, src: 'AvatarIcon.jpeg', alt: 'Professional Avatar' },
+  { id: 2, src: 'Eric.JPG', alt: 'Eric' },
+  { id: 3, src: 'professional.JPG', alt: 'Headshot' },
 ];
 
 const AvatarCarousel = () => {
