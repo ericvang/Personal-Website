@@ -10,14 +10,14 @@ const About = () => {
           </h2>
           <div className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed space-y-6">
             <p>
-              Originally from Brooklyn Park, MN. I am currently a junior at UW-Madison studying Computer Science and Data Science.
+              Originally from Brooklyn Park, MN. I am currently a rising junior at UW-Madison studying Computer Science and Data Science.
             </p>
             <p>
             My work spans across full-stack development, machine learning, and inclusive design. I’ve used tools like Python, JavaScript, Flask, React, Unity, and scikit-learn in projects ranging from hackathons to academic projects. 
-            I also work as an Adaptive Technology Assistant, where I help convert educational materials into formats accessible for students with disabilities.
+            My current occupation is a Start-Up SWE Intern at DarkHorse Solutions LLC where I am working on a RFID Project, an AI-Developer at the UW-Madison SAIL program sponsored by OpenAI, and an Adaptive Technology Assistant at the McBurney Center.
             </p>
             <p>
-              When I'm not coding, you'll find me working out, taking naps, and trying new foods.
+              When I'm not coding, you'll find me working out, enjoying the outdoors, taking naps, and trying new foods!
             </p>
           </div>
         </div>
